@@ -36,7 +36,7 @@ validGame :: Game -> Bool
 validGame (_, pulls) = length pulls == length (filter validPull pulls) 
 
 toPower :: Game -> Int
-toPower (_, xs) =   foldr (*) 1 powers 
+toPower (_, xs) =   product powers 
     where powers = map (maximum . map fst) $ groupBy(\x y -> snd x == snd y) $ sortOn snd xs  
 
 part1:: [String] -> Int
