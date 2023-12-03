@@ -23,7 +23,8 @@ replaceWith (x:xs)
 part2:: [String] -> Int
 part2 = sum . map ((\xs -> 10 * head xs + last xs) . replaceWith)
 
-main = do
+solve :: IO ()
+solve = do
     input <- readFile "inputs/day1.txt"
     print $ part1 $ lines input
     print $ part2 $ lines input
