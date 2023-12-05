@@ -1,3 +1,5 @@
+module Day2 where
+
 import Data.Char (digitToInt, isDigit)
 import Data.Text (splitOn, pack, unpack)
 import Data.List (groupBy, sortOn)
