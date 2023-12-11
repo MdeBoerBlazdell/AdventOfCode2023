@@ -1,9 +1,6 @@
 import Data.Text (splitOn, pack, unpack, split)
 import Data.Char (isDigit)
 
-
-type Race = (Int, Int)
-
 parseRace1 :: String -> String -> [(Int, Int )]
 parseRace1 ts ds = times `zip` distances 
     where times = map read $ words ts 
